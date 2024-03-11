@@ -32,7 +32,7 @@ def handle_category(category_table):
         question = record[1]
         correct_answer = record[2]
         print("Question:", question)
-        user_answer = input("Your answer: ")
+        user_answer = input("Your answer:")
         if user_answer.strip().lower() == correct_answer.strip().lower():
             print_colored("Correct!", GREEN)
         else:
@@ -41,13 +41,13 @@ def handle_category(category_table):
 
 # Handle user's choice of category
 if userDecisionCategory == "1":
-    handle_category("Business Stats")
+    handle_category("Business_Stats")
 elif userDecisionCategory == "2":
     handle_category("DatabaseMGMT")
 elif userDecisionCategory == "3":
     handle_category("Marketing")
 elif userDecisionCategory == "4":
-    handle_category("Business MGMT")
+    handle_category("Business_MGMT")
 elif userDecisionCategory == "5":
     handle_category("Business_App_Development")
 else:
