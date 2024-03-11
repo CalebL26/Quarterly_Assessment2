@@ -5,7 +5,7 @@ conn = sqlite3.connect('quiz_bowl.db')
 cursor = conn.cursor()
 
 
-categories = ['Business MGMT', ' DatabaseMGMT', 'Business Stats', 'Marketing', 'Business_App_Development']
+categories = ['Business_MGMT', 'DatabaseMGMT', 'Business_Stats', 'Marketing', 'Business_App_Development']
 
 for category in categories:
     cursor.execute(f'''CREATE TABLE IF NOT EXISTS {category.replace(" ", "_")} (
@@ -14,6 +14,6 @@ for category in categories:
                     answer TEXT
                     )''')
 
-# Commit changes and close connection
+
 conn.commit()
 conn.close()
